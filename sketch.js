@@ -1,16 +1,16 @@
- hr = hour();
- mn = minute();
- sc = second();
+ var  hr,mn,sc,hrAngle,scAngle,mnAngle;
 
 function setup() {
   createCanvas(800,400);
-  createSprite(400, 200, 50, 50);
+ AngleMode(DEGREES);
 }
 
 function draw() {
   background(255,255,255);  
   drawSprites();
-  angleMode(degrees);
+ hr = hour();
+ mn = minute();
+ sc = second();
   scAngle = Map(sc,0,60,0,360);
   Push();
   rotate(scAngle);
